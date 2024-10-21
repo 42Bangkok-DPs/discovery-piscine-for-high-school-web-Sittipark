@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    .calculator {
+      display: inline-block;
+      padding: 20px;
+      border: 1px solid #000;
+      border-radius: 5px;
+    }
+    input, select, button {
+      font-size: 18px;
+      margin: 10px;
+      padding: 10px;
+      width: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Basic Calculator</h1>
+
+  <div class="calculator">
+    <input type="number" id="leftOperand" placeholder="Left" min="0">
+    <select id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+    <input type="number" id="rightOperand" placeholder="Right" min="0">
+    <button onclick="calculate()">Try me!</button>
+  </div>
+
+  <script>
+    function calculate() {
+      const leftOperand = parseInt(document.getElementById('leftOperand').value);
+      const rightOperand = parseInt(document.getElementById('rightOperand').value);
+      const operator = document.getElementById('operator').value;
+
+      // Validate that both inputs are positive integers
+      if (isNaN(leftOperand) || isNaN(rightOperand) || leftOperand < 0 || rightOperand < 0) {
+        alert('Error :(');
+        console.error('Error :(');
+        return;
+      }
+
+      let result;
+      switch (operator) {
+        case '+':
+          result = leftOperand + rightOperand;
+          break;
+        case '-':
+          result = leftOperand - rightOperand;
+          break;
+        case '*':
+          result = leftOperand * rightOperand;
+          break;
+        case '/':
+          if (rightOperand === 0) {
+            alert("It's over 9000!");
+            console.error("It's over 9000!");
+            return;
+          }
+          result = leftOperand / rightOperand;
+          break;
+        case '%':
+          if (rightOperand === 0) {
+            alert("It's over 9000!");
+            console.error("It's over 9000!");
+            return;
+          }
+          result = leftOperand % rightOperand;
+          break;
+        default:
+          alert('Error :(');
+          console.error('Error :(');
+          return;
+      }
+
+      // Display the result in alert and console
+      alert(`Result: ${result}`);
+      console.log(`Result: ${result}`);
+    }
+
+    // Set a timer for 30 seconds to display an alert
+    setInterval(function() {
+      alert('Please, use me...');
+    }, 30000);
+  </script>
+
+</body>
+</html>
