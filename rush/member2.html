@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member 1 Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Playfair Display', serif;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .navbar {
+            background-color: #333;
+            border-bottom: 2px solid gold;
+            position: fixed; /* Set the navbar to fixed position */
+            top: 0;
+            width: 100%; /* Full width */
+        }
+
+        .nav-link {
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .nav-link:hover {
+            color: gold;
+        }
+
+        h1 {
+            color: #c5a032;
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.25rem;
+        }
+
+        .btn-primary {
+            background-color: #d4af37;
+            border: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #c5a032;
+            color: #333;
+            transform: scale(1.08);
+        }
+
+        .container {
+            background: linear-gradient(145deg, #f5f5f5, #e3e3e3);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            width: 450px;
+            height: 200px;
+            border: 5px solid #c5a032;
+            border-radius: 50%;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Certificate Section */
+        .certificate {
+            margin-top: 30px;
+        }
+
+        .certificate img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .certificate img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Skill Section */
+        .skills {
+            margin-top: 30px;
+        }
+
+        .skill-item {
+            display: inline-block;
+            margin: 15px;
+            padding: 15px 30px;
+            background-color: #c5a032;
+            color: #fff;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background-color: #333;
+            transform: scale(1.08);
+            color: gold;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            img {
+                max-width: 150px;
+            }
+
+            .skill-item {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Team Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="member1.html">Member 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="member2.html">Member 2</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container text-center mt-5">
+        <h1>Hi! it's Pasuthee Thongkhum.</h1>
+        <h2>I'm a Future CEO!!</h2><br>
+        <img src="nutty1.jpg" alt="Member 2 Photo" class="img-fluid my-4"><br>
+
+        <!-- Certificate Section -->
+        <div class="certificate mt-5">
+            <h2>Certificates 🏅</h2><br>
+            <div class="d-flex justify-content-around flex-wrap">
+                <img src="421.jpg" alt="Certificate 1">
+                <img src="422.jpg" alt="Certificate 2">
+                <img src="423.jpg" alt="Certificate 3">
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="skills mt-5">
+            <h2>Skills 🛠️</h2>
+            <div>
+                <div class="skill-item">Web Development</div>
+                <div class="skill-item">Business Administration</div>
+                <div class="skill-item">Customer Service</div>
+            </div><br>
+        </div>
+
+        <h2>Contacts 📞</h2><br>
+        <p><strong>Email:</strong> pasutheethongkhum@gmail.com</p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/42Bangkok-DPs/discovery-piscine-for-high-school-web-Sittipark/tree/main" target="_blank">Let's explore!</a></p>
+        <p><strong>Phone:</strong> 099-999-9999</p>
+
+        <a href="index.html" class="btn btn-primary mt-3">Back to Home</a>
+    </div><br><br>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
